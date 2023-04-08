@@ -1,0 +1,31 @@
+--Create a product database for a photography studio 
+
+CREATE TABLE Stevon_Barnett_Photography_Physical_Products (id INTEGER, Name TEXT, Material TEXT, Quantity INTEGER, Cost_Per_Item INTEGER, Total INTEGER);
+
+INSERT INTO Stevon_Barnett_Photography_Physical_Products VALUES (1, "5 by 7", "Canvas", 2, 99.99, 199.98);
+INSERT INTO Stevon_Barnett_Photography_Physical_Products VALUES (2, "8 by 10", "Canvas", 1, 149.99, 149.99);
+INSERT INTO Stevon_Barnett_Photography_Physical_Products VALUES (3, "12 by 14", "Canvas", 1, 200.00, 200.00);
+INSERT INTO Stevon_Barnett_Photography_Physical_Products VALUES (4, "12 by 14", "Metal", 2, 200.00, 400.00);
+INSERT INTO Stevon_Barnett_Photography_Physical_Products VALUES (5, "14 by 16", "Acrylic", 1, 250.00, 250.00);
+INSERT INTO Stevon_Barnett_Photography_Physical_Products VALUES (6, "14 by 16", "Metal", 1, 250.00, 250.00);
+INSERT INTO Stevon_Barnett_Photography_Physical_Products VALUES (7, "14 by 16", "Canvas", 1, 250.00, 250.00);
+INSERT INTO Stevon_Barnett_Photography_Physical_Products VALUES (8, "16 by 18", "Acrylic", 0, 300.00, 0.00);
+INSERT INTO Stevon_Barnett_Photography_Physical_Products VALUES (9, "16 by 18", "Metal", 0, 300.00, 0.00);
+INSERT INTO Stevon_Barnett_Photography_Physical_Products VALUES (10, "20 by 20", "Acrylic", 0, 400.00, 0.00);
+INSERT INTO Stevon_Barnett_Photography_Physical_Products VALUES (11, "20 by 20", "Metal", 0, 400.00, 0.00);
+INSERT INTO Stevon_Barnett_Photography_Physical_Products VALUES (12, "20 by 20", "Canvas", 0, 400.00, 0.00);
+INSERT INTO Stevon_Barnett_Photography_Physical_Products VALUES (13, "24 by 28", "Acrylic", 1, 550.00, 550.00);
+INSERT INTO Stevon_Barnett_Photography_Physical_Products VALUES (14, "24 by 28", "Metal", 1, 550.00, 550.00);
+INSERT INTO Stevon_Barnett_Photography_Physical_Products VALUES (15, "24 by 28", "Canvas", 0, 550.00, 0.00);
+
+-- Display the database ordered by price
+
+SELECT * FROM Stevon_Barnett_Photography_Physical_Products ORDER BY "Cost_Per_Item";
+
+--Display the database ordered in least to greatest dollar value considering the quantity and dollar value per product
+
+SELECT * FROM Stevon_Barnett_Photography_Physical_Products ORDER BY "total";
+
+-- What are the 5 most popular sizes?
+
+SELECT "Name" FROM Stevon_Barnett_Photography_Physical_Products ORDER BY "Quantity" DESC limit 5;
